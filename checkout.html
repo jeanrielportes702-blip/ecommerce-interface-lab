@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopEase - Checkout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f5f5f5;
+        }
+
+        main {
+            flex: 2;
+            padding: 30px;
+        }
+
+        section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        fieldset legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        .payment-options label {
+            font-weight: normal;
+            display: block;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        aside {
+            flex: 1;
+            padding: 30px;
+            background-color: #ffffff;
+            border-left: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+        }
+
+        aside h2 {
+            margin-top: 0;
+        }
+
+        .summary-item {
+            margin-bottom: 10px;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+      
+        <section>
+            <h2>Shipping Information</h2>
+
+            <form action="confirmation.html" method="post">
+
+                <fieldset>
+                    <legend>Shipping Address</legend>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="street">Street Address</label>
+                    <input type="text" id="street" name="street" required>
+
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" required>
+                </fieldset>
+
+        </section>
+
+        <section>
+            <h2>Payment Details</h2>
+
+                <div class="payment-options">
+                    <label>
+                        <input type="radio" name="payment" value="credit" required>
+                        Credit Card
+                    </label>
+
+                    <label>
+                        <input type="radio" name="payment" value="paypal">
+                        PayPal
+                    </label>
+                </div>
+
+                <label for="card">Card Number</label>
+                <input type="text" id="card" name="card">
+
+                <label for="expiry">Expiry Date</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="cvv">
+
+                <button type="submit">Place Order</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Order Summary</h2>
+
+        <div class="summary-item">Wireless Headphones x1 — $79.99</div>
+        <div class="summary-item">Smart Watch x2 — $259.98</div>
+
+        <hr>
+
+        <div class="summary-item">Subtotal: $339.97</div>
+        <div class="summary-item">Shipping: $10.00</div>
+
+        <div class="total">Total: $349.97</div>
+    </aside>
+
+</body>
+</html>
