@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopEase - Product Detail</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .product-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .product-image img {
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        .product-info {
+            max-width: 500px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .reviews {
+            margin-top: 50px;
+        }
+
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        blockquote {
+            margin: 10px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .review-author {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wireless Headphones</h1>
+
+    <div class="product-container">
+
+        <div class="product-image">
+            <img src="images/headphones.jpg" alt="Wireless Headphones">
+        </div>
+
+        <div class="product-info">
+            <p><strong>Price:</strong> $79.99</p>
+            <p>High-quality wireless headphones with noise cancellation and long battery life.</p>
+
+            <h2>Technical Specifications</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Battery Life</td>
+                    <td>20 Hours</td>
+                </tr>
+                <tr>
+                    <td>Connectivity</td>
+                    <td>Bluetooth 5.0</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>250g</td>
+                </tr>
+                <tr>
+                    <td>Warranty</td>
+                    <td>1 Year</td>
+                </tr>
+            </table>
+
+            <form action="cart.html" method="post">
+                <label for="quantity"><strong>Quantity:</strong></label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+                <button type="submit">Add to Cart</button>
+            </form>
+
+        </div>
+    </div>
+
+    <section class="reviews">
+        <h2>User Reviews</h2>
+
+        <article class="review">
+            <p class="review-author">Jane D.</p>
+            <blockquote>
+                "Amazing sound quality and very comfortable to wear for long periods!"
+            </blockquote>
+        </article>
+
+        <article class="review">
+            <p class="review-author">Michael T.</p>
+            <blockquote>
+                "Battery life is excellent. Totally worth the price."
+            </blockquote>
+        </article>
+
+        <article class="review">
+            <p class="review-author">Sarah L.</p>
+            <blockquote>
+                "Great noise cancellation, but I wish it came in more colors."
+            </blockquote>
+        </article>
+
+    </section>
+
+</body>
+</html>
