@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShopEase - Shopping Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul.cart-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.cart-items li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        ul.cart-items img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-details h3 {
+            margin: 0 0 8px 0;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+        }
+
+        .subtotal {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: right;
+        }
+
+        .checkout-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .empty-cart {
+            margin-top: 40px;
+            padding: 30px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Shopping Cart</h1>
+
+    <ul class="cart-items">
+
+        <li>
+            <img src="images/headphones.jpg" alt="Wireless Headphones">
+            <div class="item-details">
+                <h3>Wireless Headphones</h3>
+                <p>Price: $79.99</p>
+                <label>
+                    Quantity:
+                    <input type="number" min="1" value="1">
+                </label>
+            </div>
+        </li>
+
+        <li>
+            <img src="images/watch.jpg" alt="Smart Watch">
+            <div class="item-details">
+                <h3>Smart Watch</h3>
+                <p>Price: $129.99</p>
+                <label>
+                    Quantity:
+                    <input type="number" min="1" value="2">
+                </label>
+            </div>
+        </li>
+
+    </ul>
+
+    <section class="subtotal">
+        <h2>Subtotal: $339.97</h2>
+        <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+    </section>
+
+    <section class="empty-cart">
+        <h2>Your cart is currently empty</h2>
+        <p>Browse our products and add items to your cart.</p>
+    </section>
+
+</body>
+</html>
