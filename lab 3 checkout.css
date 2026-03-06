@@ -1,0 +1,191 @@
+/* Navigation styles for responsiveness */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Style links */
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #444;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+/* Larger screens: horizontal layout */
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+/* Base styles for mobile (up to 480px) */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Layout for main content and aside */
+main {
+  flex: 2;
+  padding: 30px;
+}
+
+aside {
+  padding: 30px;
+  background-color: #ffffff;
+  border-left: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sections styling with grid for form layout */
+section {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Heading styles */
+h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Shipping form styles with grid layout on larger screens */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Payment options styling */
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payment-options label {
+  font-weight: normal;
+}
+
+/* Submit button styling with animation */
+button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: pulse 2s infinite;
+}
+
+button:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+
+/* Order summary styles with grid on larger screens */
+aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-item {
+  margin-bottom: 10px;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+/* Responsive layout: side-by-side on large screens */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+  main {
+    flex: 3;
+  }
+  aside {
+    flex: 1;
+    height: auto;
+    position: relative;
+  }
+  body {
+    display: flex;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
