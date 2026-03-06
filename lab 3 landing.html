@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopEase - Landing Page</title>
+<link rel="stylesheet" href="landing.css" />
+<style>
+/* Add this CSS to your existing styles to align each product to the right */
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the right */
+  text-align: right; /* Text align right for headings and paragraphs */
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 style="color: white; margin: 0;">ShopEase</h1>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="product.html">Shop</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Welcome to ShopEase</h1>
+  <p>Your one-stop shop for the latest trends and best deals.</p>
+  <button>Shop Now</button>
+</div>
+
+<section>
+  <h2>Featured Products</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="headphones.jpg" alt="Wireless Headphones" />
+      <h3>Wireless Headphones</h3>
+      <p>$79.99</p>
+    </div>
+    <div class="product-card">
+      <img src="watch.jpg" alt="Smart Watch" />
+      <h3>Smart Watch</h3>
+      <p>$129.99</p>
+    </div>
+    <div class="product-card">
+      <img src="shoes.jpg" alt="Running Shoes" />
+      <h3>Running Shoes</h3>
+      <p>$59.99</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Discounted Products</h2>
+  <div class="products">
+    <div class="product-card">
+      <img src="speaker.jpg" alt="Bluetooth Speaker" />
+      <h3>Bluetooth Speaker</h3>
+      <p><span class="discount">$39.99</span> (20% Off)</p>
+    </div>
+    <div class="product-card">
+      <img src="jacket.jpg" alt="Leather Jacket" />
+      <h3>Leather Jacket</h3>
+      <p><span class="discount">$89.99</span> (30% Off)</p>
+    </div>
+    <div class="product-card">
+      <img src="backpack.jpg" alt="Backpack" />
+      <h3>Backpack</h3>
+      <p><span class="discount">$24.99</span> (15% Off)</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 ShopEase. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
